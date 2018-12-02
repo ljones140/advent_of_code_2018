@@ -1,4 +1,5 @@
-frequencies = File.readlines('input.txt').map(&:to_i)
+frequencies = File.readlines("#{File.dirname(__FILE__)}/input.txt").map(&:to_i)
+
 
 # sum of input
 p frequencies.reduce(0, &:+)
