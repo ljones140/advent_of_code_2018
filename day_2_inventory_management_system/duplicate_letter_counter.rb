@@ -4,7 +4,7 @@ module DuplicateLetterCounter
 
   def call(letters)
     letter_counter = {}
-    letters.split(//).each do |letter|
+    letters.chars.each do |letter|
       count = letter_counter.fetch(letter, 0) + 1
       letter_counter[letter] = count
     end

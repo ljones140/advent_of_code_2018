@@ -4,7 +4,7 @@ module CommonLetterChecker
 
   def call(strings)
     strings.each do |string|
-      string.split(//).each_with_index do |s, i|
+      string.chars.each_with_index do |s, i|
         regex_match = string.dup
         regex_match[i] =  '.'
         matches = strings.grep(/#{regex_match}/)
